@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Edit Documents</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+
+<style type="text/css">
+
+     body{ font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+          font-size: 15px;
+          background-color:#ededed;
+
+		}
+		input[type=text]{
+            width: 35%;
+		}
+
+    .okkk{
+  margin-top : 50px;
+    }
+    .column1{
+      width : 57%;
+        text-align : left;
+    }
+    .column2{
+      width : 15%;
+      text-align : center;
+    }
+    .column3{
+      width : 14%;
+        text-align : center;
+    }
+    .column4{
+      width : 14%;
+        text-align : center;
+    }
+    .delete-document {
+      color: blue;
+    }
+    .delete-document:hover {
+      cursor: pointer;
+      /* color: blue; */
+    }
+	</style>
+
+
+<body>
+
+<div class="container" ng-app="app" ng-controller="ListController">
+
+<center>
+
+
+       <input type="text" class="form-control mb-5 okkk" ng-model="allKeywords" placeholder="Search...." id="filter" , onkeyup="search()"/>
+        <h1 id="/delete/{{user._id}}" class="header"> {{user.Fname}} {{user.Lname}} Documents</h1>
+</center>
+
+        <table class="table table-bordered table-striped " id = "table">
+            <thead class="table-dark">
+              <th class="column1">Name of file</th>
+               <th class="column2">Click to download</th>
+               <th class="column3">Click to view</th>
+               <th class = "column4">Click to delete</th>
+            </thead>
+
+          <tr>
+
+                           {{#each user.links}}
+                              <td class="column1"><li>{{filename}}</li> </td>
+                              <td  class="column2"><a href="{{downloadLink}}" > <i class="fas fa-download"></i></a></td>
+                              <td class="column3"><a href="{{viewLink}}" > <i class="fas fa-eye"></i></a> </td>
+                              <td class="column4"><i class="fas fa-trash delete-document" id="/document/{{_id}}"></i></td>
+                           </tr>
+                            {{/each}}
+
+        </table>
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script>
+  function search(){
+  let filter = document.getElementById('filter').value.toLowerCase();
+  const table = document.getElementById('table');
+  let tr = table.getElementsByTagName('tr');
+  for(var i= 0 ; i < tr.length ; i++){
+      let td = tr[i].getElementsByTagName('td')[0];
+      if(td){
+          let textvalue = td.textContent || td.innerHTML;
+          if(textvalue.toLowerCase().indexOf(filter) > -1 ){
+              tr[i].style.display = "";
+          }else{
+              tr[i].style.display = "none";
+          }
+      }
+  }
+
+}
+
+$('.delete-document').click(function(){
+    var userid = $('.header').attr("id");
+    var url = $(this).attr("id");
+    console.log(url);
+   console.log(userid);
+    let a = confirm("Are you sure to delete this document");
+    if(a == true){
+        window.location.href = userid + url;
+    }
+
+})
+
+</script>
+
+
+</body>
+</html>

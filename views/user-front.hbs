@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Profile</title>
+	<link rel="stylesheet" href="../user-front.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+</head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+<body>
+  <div class="main-content">
+    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+      <div class="container-fluid">
+				<span class="avatar avatar-sm ">
+					<a  href="http://www.ceoitbox.com/" target="_blank">	<img alt="Image placeholder" src="https://yt3.ggpht.com/ytc/AAUvwnjkH8PYtpg7aHYyDpAUmJsPfBfAexS8Uz3se7Lxlw=s900-c-k-c0x00ffffff-no-rj"></a>
+				</span>
+				<div class="media-body ml-2 d-none d-lg-block">
+				  <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="http://www.ceoitbox.com/" target="_blank">Ceoitbox</a>
+				</div>
+        <ul class="navbar-nav align-items-center d-none d-md-flex">
+          <li class="nav-item dropdown">
+            <a class="nav-link pr-0" href="/user/info/update" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div class="media align-items-center">
+                <span class="avatar avatar-sm rounded-circle">
+                  <img alt="Image placeholder" src="{{user.image.path}}">
+                </span>
+                <div class="media-body ml-2 d-none d-lg-block">
+                  <span class="mb-0 text-sm  font-weight-bold">{{user.Fname}} {{user.Lname}}</span>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 400px; background-image: url(https://images.unsplash.com/photo-1555475660-3df469f5d6d7?ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTZ8MTcwODI3Nnx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&w=1000&q=80); background-size: cover; background-position: center top;">
+      <span class="mask bg-gradient-default opacity-8"></span>
+      <div class="container-fluid d-flex align-items-center">
+        <div class="row">
+          <div id = "okk">
+						<div id="okk">
+						<h1 class="display-2 text-white">Hello {{user.Fname}} {{user.Lname}}</h1>
+						</div>
+            	<h3 class=" text-white" style="display: none;">{{user.role}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid mt--7">
+      <div class="row">
+        <div class="col-xl-4 order-xl-2 mb-5 mb-xl-0">
+          <div class="card card-profile shadow">
+            <div class="row justify-content-center">
+              <div class="col-lg-3 order-lg-2">
+                <div class="card-profile-image">
+                    <img src="{{user.image.path}}" class="rounded-circle">
+                </div>
+              </div>
+            </div>
+            <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+            </div>
+            <div class="card-body pt-0 pt-md-4">
+              <div class="row">
+                <div class="col">
+                  <div class="card-profile-stats d-flex justify-content-center mt-md-5">
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <h3>
+                  {{user.Fname}} {{user.Lname}}
+                </h3>
+                <div class="h5 font-weight-300">
+                  <i class="ni location_pin mr-2"></i>{{user.State}}, India
+                </div>
+              </div>
+            </div>
+						<div class="hh" style="display : flex ; justify-content : center; flex-direction : column ; text-align : center">
+						<a href="/user/doc" class="btn btn-info mybtn" id="view-doc">View Documents</a>
+							<a href="https://forms.gle/WkcecAxK1ZLYLAZL9" target="_blank" class="btn btn-info mybtn" id="leave">Apply For Leave</a>
+							<a href="/users" class="btn btn-info mybtn" id="admin-right">Users Information</a>
+							<a href="https://script.google.com/a/macros/ceoitbox.in/s/AKfycbzLdOYmTtgo3cvzVVsZkbm0uX6Q7qFJ2uKAfsF-hDfNV14y_gyGJ9f2Kg/exec" target="_blank" class="btn btn-info mybtn" >Check Leave Status</a>
+							<a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTjtQwmVlZS00nlEtprXAVFfev-bn8ZXhNNFvjMln3Hv4nlPPMuQ91QGDG4yTONHWOV2pMoIjcJEh_Z/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" target="_blank" class="btn btn-info mybtn" >Holiday Calender</a>
+							<a href="https://script.google.com/macros/s/AKfycbx35Q1fhdZJ-N62gm-9sg-H8flxD2ALcVGXIEyWS7lLYHSk8OWLqEv0aXD6VAVuXaiMtQ/exec" target="_blank" class="btn btn-info mybtn" >View All Employees</a>
+							<a href="https://sites.google.com/ceoitbox.com/cbx-intranet/home" target="_blank" class="btn btn-info mybtn" >Company Intranet</a>
+					</div>
+          </div>
+
+        </div>
+
+        <div class="col-xl-8 order-xl-1">
+          <div class="card bg-secondary shadow">
+            <div class="card-header bg-white border-0">
+              <div class="row align-items-center">
+                <div class="col-8">
+                  <h3 class="mb-0">My account</h3>
+                </div>
+                <div class="col-4 text-right">
+                  <a href="/user/editInfo" class="btn btn-sm btn-primary" id="edit-info">Edit Profile</a>
+									<a href="/user/changePassword" class="btn btn-sm btn-primary" id="change-pass">Change Password</a>
+                </div>
+
+              </div>
+            </div>
+            <div class="card-body">
+              <form>
+                <h6 class="heading-small text-muted mb-4">{{user.role}} Personal information</h6>
+                <div class="pl-lg-4">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-username">First Name</label>
+
+												<span  class="form-control form-control-alternative">{{user.Fname}}</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-email">Last Name</label>
+                        <span  class="form-control form-control-alternative">{{user.Lname}}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-first-name">Email Address</label>
+							<span  class="form-control form-control-alternative">{{user.username}}</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-last-name">Phone Number</label>
+												<span  class="form-control form-control-alternative">{{user.Phone}}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-first-name">Emergency Contact Name</label>
+							<span  class="form-control form-control-alternative">{{user.emergencyContactName}}</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-last-name">Emergency Contact Number</label>
+												<span  class="form-control form-control-alternative">{{user.emergencyContactNumber}}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-first-name">Gender</label>
+							<span  class="form-control form-control-alternative">{{user.Gender}}</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-last-name">Marritual Status</label>
+												<span  class="form-control form-control-alternative">{{user.marritualStatus}}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-first-name">Date Of Birth</label>
+							<span  class="form-control form-control-alternative">{{user.dob}}</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-last-name">Joining Date</label>
+												<span  class="form-control form-control-alternative">{{user.joiningDate}}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="my-4">
+                <h6 class="heading-small text-muted mb-4">Location</h6>
+                <div class="pl-lg-4">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-address">Address</label>
+												<span  class="form-control form-control-alternative">{{user.Address}}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-city">City</label>
+												<span  class="form-control form-control-alternative">{{user.State}}</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-country">Country</label>
+												<span  class="form-control form-control-alternative">India</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-country">Postal code</label>
+												<span  class="form-control form-control-alternative">{{user.Pincode}}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="my-4">
+                <h6 class="heading-small text-muted mb-4">Employee Details</h6>
+                <div class="pl-lg-4">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-username">Employee Id</label>
+
+												<span  class="form-control form-control-alternative">{{user.EmployeId}}</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-email">Employee State Insurance</label>
+                        <span  class="form-control form-control-alternative">{{user.esi}}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-first-name">Department</label>
+							<span  class="form-control form-control-alternative">{{user.Department}}</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-last-name">Designation</label>
+												<span  class="form-control form-control-alternative">{{user.Designation}}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-first-name">Provident Fund</label>
+							<span  class="form-control form-control-alternative">{{user.pv}}</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-last-name">Universal Account Number</label>
+												<span  class="form-control form-control-alternative">{{user.uan}}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="row align-items-center justify-content-xl-between">
+      <div class="col-xl-6 m-auto text-center">
+        <div class="copyright">
+          <p>Made by <a href="http://www.ceoitbox.com/" target="_blank">Ceoitbox</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+<script>
+   window.onload = function(){
+     let ab = document.getElementsByTagName('h3')[0].outerText;
+     if(ab === 'user'){
+       document.getElementById('admin-right').style.display = "none";
+     }else{
+       document.getElementById('view-doc').style.display = "none";
+       document.getElementById('leave').style.display = "none";
+     }
+   }
+</script>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"
+    />
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@-webkit-keyframes animation-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes animation-rotate {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes animation-rotate {
+  100% {
+    -o-transform: rotate(360deg);
+  }
+}
+
+@keyframes animation-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Raleway', sans-serif;
+  transform: translateX(0%);
+  height: 100%;
+  width: 100%;
+  transition: transform 0.2s linear;
+  user-select:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -o-user-select:none;
+}
+
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+  letter-spacing: 0px;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.header-container .page-center,
+.body-container .page-center,
+.footer-container .page-center {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+  overflow: hidden;
+}
+.button i {
+    margin-right: 8px;
+}
+.header-container-wrapper {
+  flex: 0 0 auto;
+}
+.body-container-wrapper {
+  flex: 1 0 auto;
+}
+
+.body-container-wrapper .page-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh - 170px);
+}
+.body-container i.fa.fa-cloud {
+    font-size: 100px;
+    color: #598a31;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.48);
+}
+.custom-header-bg {
+    background: #598a31;
+    padding: 20px 0;
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: 0 0 12px #000;
+}
+
+.logo {
+  width: 30%;
+  float: left;
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: 100;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+
+.button {
+  white-space: nowrap;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 30px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+  background: #fff;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .025em;
+  color: #555;
+  text-decoration: none;
+  -webkit-transition: all .15s ease;
+  transition: all .15s ease;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+.button:hover {
+  color: #6e6e6e;
+  transform: translateY(-1px);
+  box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
+}
+
+.button:active {
+  color: #555;
+  background-color: #f6f9ff;
+  transform: translateY(1px);
+  box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+}
+
+
+.overall {
+    position: relative;
+}
+.overall:before {
+    content: "";
+    border-top: 2px solid #fff;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    top: 12px;
+}
+
+
+@media (max-width:700px) {
+  .custom-header-bg {
+    text-align: center;
+  }
+  .logo {
+    width: 100%;
+    float: none;
+    margin-bottom: 20px;
+  }
+
+}
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="header-container-wrapper">
+        <div class="header-container">
+          <div class="custom-header-bg">
+            <div class="page-center">
+
+              <div class="logo">
+                <a href="http://www.ceoitbox.com/" style="color : white">
+                  <img alt="Color Google Drive icon" style="width : 40px " src="https://zenprospect-production.s3.amazonaws.com/uploads/pictures/605db6cef285d00001a00fd2/picture">
+      CEOITBOX</a>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="body-container-wrapper">
+        <div class="body-container">
+          <div class="page-center">
+            
+             <img alt="Color Google Drive icon" style="padding-top: 50px" src="https://fonts.gstatic.com/s/i/productlogos/drive_2020q4/v8/web-64dp/logo_drive_2020q4_color_2x_web_64dp.png">
+            <h1>Upload File To Google Drive</h1>
+            {{#if success}}
+            <div class="alert alert-success alert-dismissible">
+              <a href="#" class="close" data-dismiss="alert" aria-label="close"
+                >×</a
+              >
+              <strong>Success!</strong> Your File has been successfully Uploaded.
+            </div>
+            {{/if}}
+            <form action="/upload" method="POST" enctype="multipart/form-data" >
+
+              <div class="form-group">
+              
+                <input
+                  type="file"
+                  class="form-control"
+                  name="file"
+                  required
+                  id=""
+                />
+                    
+              </div>
+
+              <div class="form-group" >
+               
+                <button class="btn btn-block btn-danger" style="background-color: #598a31; border :  1px solid #bad900;">
+                  Upload File
+                </button>
+               
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

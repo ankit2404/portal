@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Users Details</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/Admin-page.css">
+	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+<div class="row bootstrap snippets bootdeys">
+    <div class="col-md-9 col-sm-7">
+        <h2>Users</h2>
+    </div>
+    <div class="col-md-3 col-sm-5">
+        <form method="get" role="form" class="search-form-full">
+            <div class="form-group">
+     <input type="text" class="form-control"  id="filtername" placeholder="Search..." onkeyup="searchfunc()">
+                <i class="entypo-search"></i>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="table"> 
+  {{#each users}}
+<div class="member-entry" >
+    <a href="#" class="member-img">
+        <img src="{{image.path}}" class="img-rounded">
+        <i class="fa fa-forward"></i>
+    </a>
+    <div class="member-details " id="searching" >
+        <h4>{{Fname}} {{Lname}} </h4>
+        <div class="row info-list">
+            <div class="col-sm-4">
+                <i class="fas fa-envelope"></i>
+                {{username}}
+            </div>
+            <div class="col-sm-4">
+                <i class="fas fa-file-upload  " ></i>
+                <a href="{{url}}" id="{{_id}}" class="moving"> Upload Documents</a>
+            </div>
+            <div class="col-sm-4">
+              <i class="fas fa-user-edit  "></i>
+                <a href="/user/edit" id="{{_id}}" class="e-moving"> Edit Details</a>
+            </div>
+            <div class="clear"></div>
+            <div class="col-sm-4">
+                <i class="fas fa-map-marker-alt"></i>
+                {{State}}
+            </div>
+            <div class="col-sm-4">
+              <i class="fas fa-user  " ></i>
+                <a href="/document/delete" id="{{_id}}" class="u-moving"> Edit Documents</a>
+            </div>
+            <div class="col-sm-4">
+              <i class="fas fa-trash" ></i>
+                <a href="/users" id="{{_id}}" class="d-moving"> Delete User</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+ {{/each}} 
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+
+<script >
+
+$('.moving').click(function(){
+    var username = $(this).attr("id");
+    document.cookie = "mongoid" + '=' + username;
+})
+$('.e-moving').click(function(){
+    var username = $(this).attr("id");
+    document.cookie = "mongoid" + '=' + username;
+   
+})
+$('.d-moving').click(function(){
+    var username = $(this).attr("id");
+    document.cookie = "mongoid" + '=' + username;
+    let a = confirm("Are you sure to delete this user");
+    if(a == true){
+        window.location.href = '/user/delete';
+    }else{
+        window.location.href = '/users';
+    }
+})
+$('.u-moving').click(function(){
+    var username = $(this).attr("id");
+    document.cookie = "mongoid" + '=' + username;
+  
+})
+function searchfunc(){
+   let filter = document.getElementById('filtername').value.toLowerCase();
+    let table = document.getElementById('table');
+
+    for(var i= 0 ; i < table.childElementCount ; i++){
+    let c = table.children[i].children[1].children[0]; 
+       if(c){
+            let textvalue = c.textContent || c.innerHTML;
+            console.log(textvalue)
+            if(textvalue.toLowerCase().indexOf(filter) > -1 ){
+                table.children[i].style.display = "";
+            }else{
+                table.children[i].style.display = "none";
+            }
+        }   
+       
+    }
+
+
+}
+
+</script>
+</body>
+</html>
